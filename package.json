@@ -4,6 +4,7 @@
   "description": "Chat project nodeJS & socketIO",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dani Triay",
