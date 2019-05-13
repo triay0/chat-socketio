@@ -16,7 +16,12 @@
 <body>
   <h1> Chat with Socket.io & NodeJS</h1>
   <div id="messages">
-
   </div>
+  <form onsubmit="return addMessage(this);">
+    <input id='nickname' type="text" placeholder="Nick"/>
+    <textarea id='text' placeholder="Message..."></textarea>
+    <input type="submit" name="" value="Send"/>
+    </form>
 </body>
+
 </html>

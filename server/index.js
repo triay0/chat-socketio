@@ -20,6 +20,10 @@ io.on('connection', function(socket){
   console.log(socket.handshake.address + ' Has been connected to socket');
 
   socket.emit('messages', messages);
+  socket.on('add-message', function(data){
+    messages.push(data);
+    io.sockets.emit('messages', messages); //Emitir a todos los clientes conectados
+  });
 });//Metodo encargado de recibir conexiones de clientes y detectar cuando se conecta un cliente
 
 server.listen(6677, function(){
